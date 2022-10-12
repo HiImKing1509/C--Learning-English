@@ -24,7 +24,7 @@
 
 ## GIẢNG VIÊN HƯỚNG DẪN
 <a name="giangvien"></a>
-* TS. **Nguyễn Bích Vân** - *tiepnv@uit.edu.vn*
+* TS. **Nguyễn Bích Vân** - *vannb@uit.edu.vn*
 
 ## THÀNH VIÊN NHÓM
 <a name="thanhvien"></a>
