@@ -1,0 +1,15 @@
+cycling: Đạp xe
+gymnastics: thể dục dụng cụ
+athletics: điền kinh
+weighlifting: cử tạ
+boxing: quyền anh
+archery: bắn cung
+fencing: đấu kiếm
+tennis: quần vợt
+swimming: bơi lội
+volleyball: bóng chuyền
+football / soccer: bóng đá
+basketball: bóng rổ
+baseball: bóng chày
+badminton: cầu lông
+Snooker: bi-a

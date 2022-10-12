@@ -1,0 +1,26 @@
+bear: con gấu
+elephent: con voi
+fox: con cáo
+giraffe: con hươu cao cổ
+hippopotamus: con hà mã
+lion: con sư tử
+rhinoceros: con tê giác
+squirrel: con sóc
+alligator: cá sấu
+bat: dơi
+wolf: chó sói
+dolphin: cá heo
+shark: cá mập
+whale: cá voi
+penguin: chim cánh cụt
+turtle: rùa
+bee: ong
+cobra: rắn hổ mang
+camel: con lạc đà
+scorpion: bọ cạp
+hedgehog: con nhím
+zebra: ngựa vằn
+jellyfish: con sứa
+squid: con mực
+starfish: sao biển
+panda: gấu trúc

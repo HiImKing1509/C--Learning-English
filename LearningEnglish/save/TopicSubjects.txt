@@ -1,0 +1,15 @@
+Math Toán học
+Algebra	Đại số
+Geometry	Hình học
+Physics	Vật lý
+Chemistry	 Hóa học
+Biology	Sinh học
+Astronomy	 Thiên văn học
+Literature	Văn học
+History	Môn Lịch sử
+Geography 	Địa lý
+Ethics	Đạo đức
+Probability	Toán xác suất
+Philosophy Triết học
+Macroeconomics	Kinh tế vĩ mô
+Microeconomics	Kinh tế vi mô

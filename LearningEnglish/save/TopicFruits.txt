@@ -1,0 +1,15 @@
+Apple: Táo
+Banana: Chuối
+Orange: Cam
+Strawberry: Dâu tây
+Pineapple: Dứa
+Starfruit: Khế
+Jackfruit: Mít
+Guava: Ổi
+Mango: Xoài
+coconut: Dừa
+lychee: Vải
+durian: Sầu riêng
+avocado: Bơ
+rambutan: Chôm chôm
+kiwi: kiwi

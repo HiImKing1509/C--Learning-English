@@ -1,0 +1,24 @@
+doctor: bác sĩ
+dentist: nha sĩ
+reporter: phóng viên
+tailor: thợ may
+teacher: giáo viên
+cook: đầu bếp
+magician: ảo thuật gia
+singer: ca sĩ
+artist: họa sĩ
+carpenter: thợ mộc
+secretary: thư kí
+policeman: cảnh sát
+hairdresser: thợ cắt tóc
+farmer: nông dân
+astronaut: phi hành gia
+architect: kiến trúc sư
+photographer: nhiếp ảnh gia
+lawyer: luật sư
+psychologist: nhà tâm lí học
+programmer: lập trình viên
+firefighter: lính cứu hỏa
+mailman: người đưa thư
+judge: quan tòa, thẩm phán
+pilot: phi công
