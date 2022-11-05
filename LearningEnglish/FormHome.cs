@@ -67,7 +67,7 @@ namespace LearningEnglish
 		}
 		private void ButtonHome_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			//GlobalResources.soundButton.Play();
 			labelTitle.Text = "Lists and Topics";
 			if (activeForm != null)
 				activeForm.Close();
@@ -136,7 +136,7 @@ namespace LearningEnglish
 
 		private void labelButtonHome_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			GlobalResources.soundMusic.Play();
 			labelTitle.Text = "Lists and Topics";
 			if (activeForm != null)
 				activeForm.Close();
@@ -230,6 +230,7 @@ namespace LearningEnglish
 		private void labelButtonRanking_Click(object sender, EventArgs e)
 		{
 			/*GlobalResources.soundButton.Play();*/
+			GlobalResources.soundMusic.PlayLooping();
 			openChildForm(new FormRanking());
 			labelTitle.Text = labelButtonRanking.Text;
 			panelRenderContent.AutoScroll = false;
@@ -237,7 +238,7 @@ namespace LearningEnglish
 
 		private void labelButtonExit_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			//GlobalResources.soundButton.Play();
 			Form fLoad = new FormMain();
 			this.Hide();
 			fLoad.Show();
@@ -245,7 +246,8 @@ namespace LearningEnglish
 
 		private void labelButtonLearning_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			//GlobalResources.soundButton.Play();
+			GlobalResources.soundMusic.PlayLooping();
 			openChildForm(new FormLearning());
 			labelTitle.Text = labelButtonLearning.Text;
 			panelRenderContent.AutoScroll = false;

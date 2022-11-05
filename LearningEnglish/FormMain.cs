@@ -239,7 +239,7 @@ namespace LearningEnglish
 
 		private void TextBoxEnterYourName_Enter(object sender, EventArgs e)
 		{
-			if (TextBoxEnterYourName.Text == "Enter" && TextBoxEnterYourName.ForeColor == Color.Silver)
+			if (TextBoxEnterYourName.Text == "Nhập nội dung cần tìm kiếm" && TextBoxEnterYourName.ForeColor == Color.Silver)
 			{
 				TextBoxEnterYourName.Text = "";
 				TextBoxEnterYourName.ForeColor = Color.Black;
@@ -250,7 +250,7 @@ namespace LearningEnglish
 		{
 			if (TextBoxEnterYourName.Text == "")
 			{
-				TextBoxEnterYourName.Text = "Enter";
+				TextBoxEnterYourName.Text = "Nhập nội dung cần tìm kiếm";
 				TextBoxEnterYourName.ForeColor = Color.Silver;
 			}
 		}

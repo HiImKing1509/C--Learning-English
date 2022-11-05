@@ -126,42 +126,42 @@ namespace LearningEnglish
 
 		private void labelLearningAnimals_Click(object sender, EventArgs e)
 		{
-            GlobalResources.soundButton.Play();
+            //GlobalResources.soundButton.Play();
             flowLayoutPanelLearning.Controls.Clear();
             LoadingFlowLayoutPanel(labelLearningAnimals.Text);
         }
 
 		private void labelLearningOccupations_Click(object sender, EventArgs e)
 		{
-            GlobalResources.soundButton.Play();
+            //GlobalResources.soundButton.Play();
             flowLayoutPanelLearning.Controls.Clear();
             LoadingFlowLayoutPanel(labelLearningOccupations.Text);
         }
 
         private void labelLearningSports_Click(object sender, EventArgs e)
 		{
-            GlobalResources.soundButton.Play();
+            //GlobalResources.soundButton.Play();
             flowLayoutPanelLearning.Controls.Clear();
             LoadingFlowLayoutPanel(labelLearningSports.Text);
         }
 
         private void labelLearningFruits_Click(object sender, EventArgs e)
 		{
-            GlobalResources.soundButton.Play();
+            //GlobalResources.soundButton.Play();
             flowLayoutPanelLearning.Controls.Clear();
             LoadingFlowLayoutPanel(labelLearningFruits.Text);
         }
 
         private void labelLearningSubjects_Click(object sender, EventArgs e)
 		{
-            GlobalResources.soundButton.Play();
+            //GlobalResources.soundButton.Play();
             flowLayoutPanelLearning.Controls.Clear();
             LoadingFlowLayoutPanel(labelLearningSubjects.Text);
         }
 
         private void labelLearningCountries_Click(object sender, EventArgs e)
 		{
-            GlobalResources.soundButton.Play();
+            //GlobalResources.soundButton.Play();
             flowLayoutPanelLearning.Controls.Clear();
             LoadingFlowLayoutPanel(labelLearningCountries.Text);
         }

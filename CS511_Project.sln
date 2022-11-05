@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningEnglish", "LearningEnglish\LearningEnglish.csproj", "{58F5000F-44F7-4B81-BB0C-FE823F310563}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningEnglish", "LearningEnglish\LearningEnglish.csproj", "{58F5000F-44F7-4B81-BB0C-FE823F310563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingOnline", "ShoppingOnline\ShoppingOnline.csproj", "{0BA60C04-9AA2-409F-A409-BA66D0CD4974}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{58F5000F-44F7-4B81-BB0C-FE823F310563}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58F5000F-44F7-4B81-BB0C-FE823F310563}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58F5000F-44F7-4B81-BB0C-FE823F310563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BA60C04-9AA2-409F-A409-BA66D0CD4974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA60C04-9AA2-409F-A409-BA66D0CD4974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA60C04-9AA2-409F-A409-BA66D0CD4974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA60C04-9AA2-409F-A409-BA66D0CD4974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

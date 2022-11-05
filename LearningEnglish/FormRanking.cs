@@ -44,37 +44,37 @@ namespace LearningEnglish
 
 		private void labelRankingAnimals_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			//GlobalResources.soundButton.Play();
 			LoadRanking(labelRankingAnimals.Text + ".csv");
 		}
 
 		private void labelRankingSports_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			//GlobalResources.soundButton.Play();
 			LoadRanking(labelRankingSports.Text + ".csv");
 		}
 
 		private void labelRankingOccupations_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			//GlobalResources.soundButton.Play();
 			LoadRanking(labelRankingOccupations.Text + ".csv");
 		}
 
 		private void labelRankingFruits_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			//GlobalResources.soundButton.Play();
 			LoadRanking(labelRankingFruits.Text + ".csv");
 		}
 
 		private void labelRankingCountries_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			//GlobalResources.soundButton.Play();
 			LoadRanking(labelRankingCountries.Text + ".csv");
 		}
 
 		private void labelRankingSubjects_Click(object sender, EventArgs e)
 		{
-			GlobalResources.soundButton.Play();
+			//GlobalResources.soundButton.Play();
 			LoadRanking(labelRankingSubjects.Text + ".csv");
 		}
 
