@@ -1,0 +1,4 @@
+[0] - <Form 3> - PanelContent
+[1] - <Form 5> - PictureBox_DetailProduct
+
+MessageBox.Show(DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt"));

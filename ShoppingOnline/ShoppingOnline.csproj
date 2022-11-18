@@ -10,10 +10,121 @@
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="6.1.1" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1537.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LearningEnglish\LearningEnglish.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CreateResources\Images_Avatar.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Images_Avatar.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CreateResources\Images_Brand.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Images_Brand.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CreateResources\Images_Coats.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Images_Coats.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CreateResources\Images_Customer.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Images_Customer.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CreateResources\Images_Jean.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Images_Jean.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CreateResources\Images_Shirt.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Images_Shirt.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CreateResources\Images_Short.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Images_Short.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CreateResources\Images_TShirt.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Images_TShirt.resx</DependentUpon>
+    </Compile>
+    <Compile Update="CreateResources\Image_Logo.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Image_Logo.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="CreateResources\Images_Avatar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_Avatar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreateResources\Images_Brand.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_Brand.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreateResources\Images_Coats.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_Coats.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreateResources\Images_Customer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_Customer.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreateResources\Images_Jean.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_Jean.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreateResources\Images_Shirt.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_Shirt.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreateResources\Images_Short.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_Short.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreateResources\Images_TShirt.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_TShirt.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CreateResources\Image_Logo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Image_Logo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

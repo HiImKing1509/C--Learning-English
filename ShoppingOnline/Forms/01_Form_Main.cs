@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningEnglish;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,19 @@ namespace ShoppingOnline.Forms
         public _01_Form_Main()
         {
             InitializeComponent();
+
+            // Initialization
+            this.BackColor = CreateResources.Variables.MaastrichtBlue;
+
+            WaitLoadingForm();
+        }
+
+        public async void WaitLoadingForm()
+        {
+            await Task.Delay(3000);
+            Form LoginForm = new Forms._02_Form_Login();
+            this.Hide();
+            LoginForm.Show();
         }
     }
 }

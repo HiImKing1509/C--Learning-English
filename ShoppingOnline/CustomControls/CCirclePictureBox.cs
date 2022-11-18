@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace ShoppingOnline.CustomControls
 {
-    class CCirclePictureBox : PictureBox
+    public class CCirclePictureBox : PictureBox
     {
         //Fields
         private int borderSize = 2;
