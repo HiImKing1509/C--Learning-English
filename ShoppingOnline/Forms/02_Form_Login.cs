@@ -84,6 +84,7 @@ namespace ShoppingOnline.Forms
                 TextBoxPassword.Text = "Mật khẩu";
                 TextBoxPassword.ForeColor = Color.Silver;
             }
+            CreateResources.Variables.getNumberOfComment();
         }
 
         private void ButtonLogin_MouseEnter(object sender, EventArgs e)

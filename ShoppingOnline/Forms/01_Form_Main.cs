@@ -19,7 +19,6 @@ namespace ShoppingOnline.Forms
 
             // Initialization
             this.BackColor = CreateResources.Variables.MaastrichtBlue;
-
             WaitLoadingForm();
         }
 

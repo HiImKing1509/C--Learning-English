@@ -99,6 +99,17 @@ create table RECEIPT_DETAILS
 )
 go
 
+create table COMMENT
+(
+	COMMENT_ID int,
+	COMMENT_DATE nvarchar(50),
+	COMMENT_PRODUCT char(4),
+	COMMENT_CUSTOMER char(4),
+	COMMENT_CONTENT nvarchar(500),
+	COMMENT_LIKE int,
+	constraint PK_COMMENT primary key (COMMENT_ID)
+)
+
 create table DISCOUNT
 (
 	DISCOUNT_ID char(4),
@@ -208,6 +219,7 @@ insert into RECEIPT values('RE00_02', '19-11-2022 09:08:55 AM', 'CU00', '800000'
 insert into RECEIPT values('RE00_03', '20-11-2022 06:14:44 PM', 'CU00', '900000')
 insert into RECEIPT values('RE01_01', '11-11-2022 13:22:33 PM', 'CU01', '600000')
 insert into RECEIPT values('RE01_02', '10-11-2022 05:35:44 PM', 'CU01', '700000')
+
 -- Add data Receipt Details
 insert into RECEIPT_DETAILS values('RE00_01', 'CO01', 'S', 4)
 insert into RECEIPT_DETAILS values('RE00_01', 'CO05', 'XL', 1)
@@ -221,6 +233,12 @@ insert into RECEIPT_DETAILS values('RE01_01', 'CO03', 'L', 4)
 insert into RECEIPT_DETAILS values('RE01_02', 'CO04', 'S', 5)
 insert into RECEIPT_DETAILS values('RE01_02', 'CO06', 'XL', 1)
 insert into RECEIPT_DETAILS values('RE01_02', 'CO15', 'L', 1)
+
+-- Add data Comment
+insert into COMMENT values(1, '12-11-2022 12:24:35 PM', 'TS01', 'CU00', N'Chất vải khá ok, màu đỉnh thật sự. ở ngoài màu tươi hơn ảnh á.', 0)
+select * from COMMENT
+select * from COMMENT inner join CUSTOMER on COMMENT.COMMENT_CUSTOMER = CUSTOMER.CUSTOMER_ID where COMMENT.COMMENT_PRODUCT = 'CO01'
+
 --Add data Discount
 insert into DISCOUNT values('DI01', '300000', 10)
 insert into DISCOUNT values('DI02', '400000', 10)
@@ -269,6 +287,8 @@ drop table RECEIPT_DETAILS
 go
 drop table DISCOUNT
 go
+drop table COMMENT
+go
 
 select [RECEIPT_ID] from RECEIPT where RECEIPT_ID like 'RE00%'
 
@@ -284,6 +304,8 @@ set RECEIPT_DETAILS_QUATITY = RECEIPT_DETAILS_QUATITY + 3
 where RECEIPT_DETAILS_ID = 'RE00_04' and RECEIPT_DETAILS_PRODUCT = 'CO06' and RECEIPT_DETAILS_SIZE = 'L'
 go
 
+update COMMENT
+
 select * from RECEIPT
 delete from RECEIPT_DETAILS where RECEIPT_DETAILS_ID = 'RE00_04' and RECEIPT_DETAILS_PRODUCT = 'TS03' and RECEIPT_DETAILS_SIZE = 'L'
 
@@ -291,9 +313,7 @@ update RECEIPT_DETAILS set RECEIPT_DETAILS_QUATITY = RECEIPT_DETAILS_QUATITY - 1
 
 select sum(RECEIPT_DETAILS_QUATITY * PRODUCT_PRICE) from RECEIPT_DETAILS INNER JOIN PRODUCT on RECEIPT_DETAILS.RECEIPT_DETAILS_PRODUCT = PRODUCT.PRODUCT_ID where RECEIPT_DETAILS.RECEIPT_DETAILS_ID = 'RE00_04'
 
-select * from RECEIPT_DETAILS INNER JOIN PRODUCT on RECEIPT_DETAILS.RECEIPT_DETAILS_PRODUCT = PRODUCT.PRODUCT_ID
-where RECEIPT_DETAILS.RECEIPT_DETAILS_ID = 'RE00_04' and RECEIPT_DETAILS.RECEIPT_DETAILS_QUATITY <> 0
-go
+select * from RECEIPT_DETAILS INNER JOIN PRODUCT on RECEIPT_DETAILS.RECEIPT_DETAILS_PRODUCT = PRODUCT.PRODUCT_ID where RECEIPT_DETAILS.RECEIPT_DETAILS_ID = 'RE00_01'
 
 insert into RECEIPT values('RE01_02', '10-11-2022 05:35:44 PM', 'CU01', '700000')
 
@@ -303,11 +323,11 @@ go
 select * from RECEIPT_DETAILS
 go
 
-select * from RECEIPT where RECEIPT_ID like 'RE00%'
+select * from RECEIPT
 
 update CUSTOMER  set CUSTOMER_NAME = 'A', CUSTOMER_PHONE_NUMBER = '0796616454', CUSTOMER_ADDRESS = '325, đường Võ Thị Sáu, tổ Yên Định, khối Yên Sơn, phường Yên Bình, tỉnh Lai Châu' where CUSTOMER_ID = 'CU05'
 
 select * from CUSTOMER
 
 
-select * from RECEIPT where RECEIPT_ID = 'RE00_01'
+select * from RECEIPT where RECEIPT_ID = 'RE00_01' 

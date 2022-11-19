@@ -35,6 +35,18 @@
             this.ButtonImage_A = new System.Windows.Forms.Button();
             this.PictureBoxShowImageProduct = new System.Windows.Forms.PictureBox();
             this.PanelInformationProduct = new System.Windows.Forms.Panel();
+            this.Panel_Comment = new System.Windows.Forms.Panel();
+            this.Panel_OtherComment = new ShoppingOnline.CustomControls.CPanelGradient();
+            this.Panel_Main_Comment = new System.Windows.Forms.FlowLayoutPanel();
+            this.Panel_MyComment = new ShoppingOnline.CustomControls.CPanelGradient();
+            this.Button_Comment = new FontAwesome.Sharp.IconButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.TextBox_MyComment = new System.Windows.Forms.TextBox();
+            this.PictureBox_Customer = new ShoppingOnline.CustomControls.CCirclePictureBox();
+            this.Panel_ProductReviews = new ShoppingOnline.CustomControls.CPanelGradient();
+            this.Button_CloseComment = new FontAwesome.Sharp.IconButton();
+            this.Label_ProductReview = new System.Windows.Forms.Label();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.PanelAddCartError = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -88,6 +100,12 @@
             this.PanelImageProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxShowImageProduct)).BeginInit();
             this.PanelInformationProduct.SuspendLayout();
+            this.Panel_Comment.SuspendLayout();
+            this.Panel_OtherComment.SuspendLayout();
+            this.Panel_MyComment.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Customer)).BeginInit();
+            this.Panel_ProductReviews.SuspendLayout();
             this.PanelAddCartError.SuspendLayout();
             this.PanelAddCartSuccess.SuspendLayout();
             this.PanelSelectProduct.SuspendLayout();
@@ -176,6 +194,8 @@
             // PanelInformationProduct
             // 
             this.PanelInformationProduct.BackColor = System.Drawing.Color.White;
+            this.PanelInformationProduct.Controls.Add(this.Panel_Comment);
+            this.PanelInformationProduct.Controls.Add(this.iconButton3);
             this.PanelInformationProduct.Controls.Add(this.PanelAddCartError);
             this.PanelInformationProduct.Controls.Add(this.PanelAddCartSuccess);
             this.PanelInformationProduct.Controls.Add(this.LabelOldPriceProduct);
@@ -192,6 +212,174 @@
             this.PanelInformationProduct.Size = new System.Drawing.Size(727, 733);
             this.PanelInformationProduct.TabIndex = 3;
             this.PanelInformationProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelInformationProduct_Paint);
+            // 
+            // Panel_Comment
+            // 
+            this.Panel_Comment.BackColor = System.Drawing.Color.White;
+            this.Panel_Comment.Controls.Add(this.Panel_OtherComment);
+            this.Panel_Comment.Controls.Add(this.Panel_MyComment);
+            this.Panel_Comment.Controls.Add(this.Panel_ProductReviews);
+            this.Panel_Comment.Location = new System.Drawing.Point(25, 125);
+            this.Panel_Comment.Name = "Panel_Comment";
+            this.Panel_Comment.Size = new System.Drawing.Size(676, 556);
+            this.Panel_Comment.TabIndex = 16;
+            this.Panel_Comment.Visible = false;
+            // 
+            // Panel_OtherComment
+            // 
+            this.Panel_OtherComment.Angle = 0F;
+            this.Panel_OtherComment.BottomColor = System.Drawing.Color.Empty;
+            this.Panel_OtherComment.Controls.Add(this.Panel_Main_Comment);
+            this.Panel_OtherComment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_OtherComment.Location = new System.Drawing.Point(0, 55);
+            this.Panel_OtherComment.Name = "Panel_OtherComment";
+            this.Panel_OtherComment.Size = new System.Drawing.Size(676, 389);
+            this.Panel_OtherComment.TabIndex = 46;
+            this.Panel_OtherComment.TopColor = System.Drawing.Color.Empty;
+            // 
+            // Panel_Main_Comment
+            // 
+            this.Panel_Main_Comment.AutoScroll = true;
+            this.Panel_Main_Comment.Location = new System.Drawing.Point(37, 18);
+            this.Panel_Main_Comment.Name = "Panel_Main_Comment";
+            this.Panel_Main_Comment.Size = new System.Drawing.Size(600, 355);
+            this.Panel_Main_Comment.TabIndex = 0;
+            // 
+            // Panel_MyComment
+            // 
+            this.Panel_MyComment.Angle = 0F;
+            this.Panel_MyComment.BottomColor = System.Drawing.Color.Empty;
+            this.Panel_MyComment.Controls.Add(this.Button_Comment);
+            this.Panel_MyComment.Controls.Add(this.panel5);
+            this.Panel_MyComment.Controls.Add(this.PictureBox_Customer);
+            this.Panel_MyComment.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Panel_MyComment.Location = new System.Drawing.Point(0, 444);
+            this.Panel_MyComment.Name = "Panel_MyComment";
+            this.Panel_MyComment.Size = new System.Drawing.Size(676, 112);
+            this.Panel_MyComment.TabIndex = 45;
+            this.Panel_MyComment.TopColor = System.Drawing.Color.Empty;
+            // 
+            // Button_Comment
+            // 
+            this.Button_Comment.BackColor = System.Drawing.Color.Green;
+            this.Button_Comment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Comment.FlatAppearance.BorderSize = 0;
+            this.Button_Comment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Comment.IconChar = FontAwesome.Sharp.IconChar.CommentDots;
+            this.Button_Comment.IconColor = System.Drawing.Color.White;
+            this.Button_Comment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Comment.IconSize = 32;
+            this.Button_Comment.Location = new System.Drawing.Point(588, 56);
+            this.Button_Comment.Name = "Button_Comment";
+            this.Button_Comment.Size = new System.Drawing.Size(71, 38);
+            this.Button_Comment.TabIndex = 0;
+            this.Button_Comment.UseVisualStyleBackColor = false;
+            this.Button_Comment.Click += new System.EventHandler(this.Button_Comment_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.TextBox_MyComment);
+            this.panel5.Location = new System.Drawing.Point(133, 19);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(449, 75);
+            this.panel5.TabIndex = 17;
+            // 
+            // TextBox_MyComment
+            // 
+            this.TextBox_MyComment.BackColor = System.Drawing.Color.White;
+            this.TextBox_MyComment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBox_MyComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TextBox_MyComment.ForeColor = System.Drawing.Color.Silver;
+            this.TextBox_MyComment.Location = new System.Drawing.Point(19, 14);
+            this.TextBox_MyComment.Multiline = true;
+            this.TextBox_MyComment.Name = "TextBox_MyComment";
+            this.TextBox_MyComment.Size = new System.Drawing.Size(411, 45);
+            this.TextBox_MyComment.TabIndex = 14;
+            this.TextBox_MyComment.Text = "Đánh giá sản phẩm";
+            this.TextBox_MyComment.Enter += new System.EventHandler(this.TextBox_MyComment_Enter);
+            this.TextBox_MyComment.Leave += new System.EventHandler(this.TextBox_MyComment_Leave);
+            // 
+            // PictureBox_Customer
+            // 
+            this.PictureBox_Customer.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.PictureBox_Customer.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.PictureBox_Customer.BorderColor2 = System.Drawing.Color.HotPink;
+            this.PictureBox_Customer.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.PictureBox_Customer.BorderSize = 2;
+            this.PictureBox_Customer.GradientAngle = 50F;
+            this.PictureBox_Customer.Location = new System.Drawing.Point(37, 23);
+            this.PictureBox_Customer.Name = "PictureBox_Customer";
+            this.PictureBox_Customer.Size = new System.Drawing.Size(66, 66);
+            this.PictureBox_Customer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox_Customer.TabIndex = 0;
+            this.PictureBox_Customer.TabStop = false;
+            // 
+            // Panel_ProductReviews
+            // 
+            this.Panel_ProductReviews.Angle = 0F;
+            this.Panel_ProductReviews.BottomColor = System.Drawing.Color.Empty;
+            this.Panel_ProductReviews.Controls.Add(this.Button_CloseComment);
+            this.Panel_ProductReviews.Controls.Add(this.Label_ProductReview);
+            this.Panel_ProductReviews.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_ProductReviews.Location = new System.Drawing.Point(0, 0);
+            this.Panel_ProductReviews.Name = "Panel_ProductReviews";
+            this.Panel_ProductReviews.Size = new System.Drawing.Size(676, 55);
+            this.Panel_ProductReviews.TabIndex = 44;
+            this.Panel_ProductReviews.TopColor = System.Drawing.Color.Empty;
+            // 
+            // Button_CloseComment
+            // 
+            this.Button_CloseComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Button_CloseComment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_CloseComment.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Button_CloseComment.FlatAppearance.BorderSize = 0;
+            this.Button_CloseComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_CloseComment.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
+            this.Button_CloseComment.IconColor = System.Drawing.Color.White;
+            this.Button_CloseComment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_CloseComment.IconSize = 32;
+            this.Button_CloseComment.Location = new System.Drawing.Point(0, 0);
+            this.Button_CloseComment.Name = "Button_CloseComment";
+            this.Button_CloseComment.Size = new System.Drawing.Size(50, 55);
+            this.Button_CloseComment.TabIndex = 43;
+            this.Button_CloseComment.UseVisualStyleBackColor = false;
+            this.Button_CloseComment.Click += new System.EventHandler(this.Button_CloseComment_Click);
+            // 
+            // Label_ProductReview
+            // 
+            this.Label_ProductReview.AutoSize = true;
+            this.Label_ProductReview.BackColor = System.Drawing.Color.Transparent;
+            this.Label_ProductReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.Label_ProductReview.ForeColor = System.Drawing.Color.Gray;
+            this.Label_ProductReview.Location = new System.Drawing.Point(72, 14);
+            this.Label_ProductReview.Name = "Label_ProductReview";
+            this.Label_ProductReview.Size = new System.Drawing.Size(218, 29);
+            this.Label_ProductReview.TabIndex = 42;
+            this.Label_ProductReview.Text = "Đánh giá sản phẩm";
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.Green;
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Comment;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 32;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(483, 625);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.iconButton3.Size = new System.Drawing.Size(218, 55);
+            this.iconButton3.TabIndex = 15;
+            this.iconButton3.Text = "Bình luận";
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // PanelAddCartError
             // 
@@ -282,16 +470,15 @@
             this.ButtonReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonReset.FlatAppearance.BorderSize = 0;
             this.ButtonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonReset.IconChar = FontAwesome.Sharp.IconChar.Rotate;
             this.ButtonReset.IconColor = System.Drawing.Color.Black;
             this.ButtonReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ButtonReset.IconSize = 32;
+            this.ButtonReset.IconSize = 14;
             this.ButtonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonReset.Location = new System.Drawing.Point(483, 623);
+            this.ButtonReset.Location = new System.Drawing.Point(483, 433);
             this.ButtonReset.Name = "ButtonReset";
-            this.ButtonReset.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.ButtonReset.Size = new System.Drawing.Size(218, 55);
+            this.ButtonReset.Size = new System.Drawing.Size(89, 30);
             this.ButtonReset.TabIndex = 6;
             this.ButtonReset.Text = "Reset";
             this.ButtonReset.UseVisualStyleBackColor = false;
@@ -365,7 +552,7 @@
             this.PanelSelectProduct.Controls.Add(this.LabelQuatitySizeS);
             this.PanelSelectProduct.Controls.Add(this.label3);
             this.PanelSelectProduct.Controls.Add(this.label1);
-            this.PanelSelectProduct.Location = new System.Drawing.Point(25, 426);
+            this.PanelSelectProduct.Location = new System.Drawing.Point(25, 427);
             this.PanelSelectProduct.Name = "PanelSelectProduct";
             this.PanelSelectProduct.Size = new System.Drawing.Size(410, 253);
             this.PanelSelectProduct.TabIndex = 3;
@@ -870,6 +1057,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxShowImageProduct)).EndInit();
             this.PanelInformationProduct.ResumeLayout(false);
             this.PanelInformationProduct.PerformLayout();
+            this.Panel_Comment.ResumeLayout(false);
+            this.Panel_OtherComment.ResumeLayout(false);
+            this.Panel_MyComment.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Customer)).EndInit();
+            this.Panel_ProductReviews.ResumeLayout(false);
+            this.Panel_ProductReviews.PerformLayout();
             this.PanelAddCartError.ResumeLayout(false);
             this.PanelAddCartError.PerformLayout();
             this.PanelAddCartSuccess.ResumeLayout(false);
@@ -941,5 +1136,17 @@
         private Panel PanelAddCartError;
         private Label label13;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private Panel Panel_Comment;
+        private FontAwesome.Sharp.IconButton Button_CloseComment;
+        private Label Label_ProductReview;
+        private CustomControls.CPanelGradient Panel_ProductReviews;
+        private CustomControls.CPanelGradient Panel_OtherComment;
+        private CustomControls.CPanelGradient Panel_MyComment;
+        private CustomControls.CCirclePictureBox PictureBox_Customer;
+        private Panel panel5;
+        private TextBox TextBox_MyComment;
+        private FontAwesome.Sharp.IconButton Button_Comment;
+        private FlowLayoutPanel Panel_Main_Comment;
     }
 }

@@ -11,6 +11,7 @@ using System.Resources;
 using System.Reflection;
 using System.Printing;
 using ShoppingOnline.DAO;
+using ShoppingOnline.CustomControls;
 
 namespace ShoppingOnline.Forms
 {
@@ -23,6 +24,7 @@ namespace ShoppingOnline.Forms
 
         ResourceManager get_rm;
         DataTable get_dt;
+        string _product_id = "";
 
         private Form activeForm = null;
         public _04_Form_Product_Detail()
@@ -66,6 +68,19 @@ namespace ShoppingOnline.Forms
             ButtonIncreaseSizeL.IconColor = CreateResources.Variables.MetallicYellow;
             ButtonIncreaseSizeXL.IconColor = CreateResources.Variables.MetallicYellow;
 
+            Panel_ProductReviews.BottomColor = CreateResources.Variables.MaastrichtBlue;
+            Panel_ProductReviews.Angle = 30;
+            Label_ProductReview.ForeColor = CreateResources.Variables.MaastrichtBlue;
+
+            Panel_OtherComment.BottomColor = CreateResources.Variables.MaastrichtBlue;
+            Panel_OtherComment.TopColor = CreateResources.Variables.MetallicYellow;
+            Panel_OtherComment.Angle = 30;
+
+            Panel_MyComment.BottomColor = CreateResources.Variables.MaastrichtBlue;
+            Panel_MyComment.TopColor = CreateResources.Variables.MaastrichtBlue;
+
+            Panel_Main_Comment.BackColor = CreateResources.Variables.MetallicYellow;
+
             DataRow row = dt.Rows[0];
             LabelNameProduct.Text = row["PRODUCT_NAME"].ToString();
             LabelFormProduct.Text = row["PRODUCT_FORM"].ToString();
@@ -91,6 +106,10 @@ namespace ShoppingOnline.Forms
             ButtonImage_B.BackgroundImage = ImageProduct_B;
             ButtonImage_C.BackgroundImage = ImageProduct_C;
             ButtonImage_D.BackgroundImage = ImageProduct_D;
+
+            _product_id = row["PRODUCT_ID"].ToString();
+
+            LoadComment(row["PRODUCT_ID"].ToString());
         }
 
         private void PanelInformationDetail_Paint(object sender, PaintEventArgs e)
@@ -444,6 +463,75 @@ namespace ShoppingOnline.Forms
                     $"and RECEIPT_DETAILS_SIZE = '{size}'";
             }
             num_row_success = provider.ExecuteNonQuery(query);
+        }
+
+        private void Button_CloseComment_Click(object sender, EventArgs e)
+        {
+            Panel_Comment.Visible = false;
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            Panel_Comment.Visible = true;
+        }
+
+        private void LoadComment(string product_id)
+        {
+            ResourceManager rm_ava = CreateResources.Variables.rm_avatar;
+            Bitmap myImage = (Bitmap)rm_ava.GetObject($"{CreateResources.Variables.DataTableAccount.Rows[0]["CUSTOMER_ID"]}");
+            PictureBox_Customer.Image = myImage;
+
+            string query = $"select * from COMMENT inner join CUSTOMER on COMMENT.COMMENT_CUSTOMER = CUSTOMER.CUSTOMER_ID where COMMENT.COMMENT_PRODUCT = '{product_id}'";
+            DataProvider provider = new DataProvider();
+
+            DataTable dt = provider.ExecuteQuery(query);
+            Panel_Main_Comment.Controls.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                Comment item = new Comment(row);
+                Panel_Main_Comment.Controls.Add(item);
+            }
+        }
+
+        private void TextBox_MyComment_Enter(object sender, EventArgs e)
+        {
+            if (TextBox_MyComment.Text == "Đánh giá sản phẩm" && TextBox_MyComment.ForeColor == Color.Silver)
+            {
+                TextBox_MyComment.Text = "";
+                TextBox_MyComment.ForeColor = Color.Black;
+            }
+        }
+
+        private void TextBox_MyComment_Leave(object sender, EventArgs e)
+        {
+            if (TextBox_MyComment.Text == "")
+            {
+                TextBox_MyComment.Text = "Đánh giá sản phẩm";
+                TextBox_MyComment.ForeColor = Color.Silver;
+            }
+        }
+
+        private void Button_Comment_Click(object sender, EventArgs e)
+        {
+            if (TextBox_MyComment.ForeColor == Color.Black)
+            {
+                string query =
+                    $"insert into COMMENT values(" +
+                    $"{++CreateResources.Variables.CommentID}, " +
+                    $"'{DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt")}', " +
+                    $"'{_product_id}', " +
+                    $"'{CreateResources.Variables.DataTableAccount.Rows[0]["CUSTOMER_ID"].ToString()}', " +
+                    $"N'{TextBox_MyComment.Text}', " +
+                    $"0)";
+                DataProvider provider = new DataProvider();
+
+                int add_comment = provider.ExecuteNonQuery(query);
+
+                LoadComment(_product_id);
+
+                TextBox_MyComment.ForeColor = Color.Silver;
+                TextBox_MyComment.Text = "Đánh giá sản phẩm";
+            }
         }
     }
 }

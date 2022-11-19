@@ -21,6 +21,8 @@ namespace ShoppingOnline.CustomControls
 
         public ItemHistory(DataRow dt) : this()
         {
+            Button_BillDetails.BackColor = CreateResources.Variables.MaastrichtBlue;
+
             Label_Receipt_ID.Text = dt["RECEIPT_ID"].ToString();
             Label_Receipt_Date.Text = dt["RECEIPT_DATE"].ToString();
             Label_Receipt_Price.Text = CreateResources.Variables.stringProcessing(dt["RECEIPT_PRICE"].ToString());
@@ -45,6 +47,11 @@ namespace ShoppingOnline.CustomControls
             CreateResources.Variables.ListControls[0].Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void Button_BillDetails_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Forms._11_Form_Bill(Button_DetailProduct.Name));
         }
     }
 }

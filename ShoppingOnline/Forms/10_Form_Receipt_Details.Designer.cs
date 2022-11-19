@@ -51,6 +51,7 @@
             this.Label_NumberOfProducts = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Button_CancelReceipt = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -61,6 +62,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.Button_CancelReceipt);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.Button_BackToHistory);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -324,6 +326,27 @@
             this.label2.TabIndex = 45;
             this.label2.Text = "Chi tiết thanh toán";
             // 
+            // Button_CancelReceipt
+            // 
+            this.Button_CancelReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Button_CancelReceipt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_CancelReceipt.FlatAppearance.BorderSize = 0;
+            this.Button_CancelReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_CancelReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Button_CancelReceipt.ForeColor = System.Drawing.Color.White;
+            this.Button_CancelReceipt.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Button_CancelReceipt.IconColor = System.Drawing.Color.Black;
+            this.Button_CancelReceipt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_CancelReceipt.IconSize = 32;
+            this.Button_CancelReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_CancelReceipt.Location = new System.Drawing.Point(287, 493);
+            this.Button_CancelReceipt.Name = "Button_CancelReceipt";
+            this.Button_CancelReceipt.Size = new System.Drawing.Size(229, 46);
+            this.Button_CancelReceipt.TabIndex = 17;
+            this.Button_CancelReceipt.Text = "Hủy đơn hàng";
+            this.Button_CancelReceipt.UseVisualStyleBackColor = false;
+            this.Button_CancelReceipt.Click += new System.EventHandler(this.Button_CancelReceipt_Click);
+            // 
             // _10_Form_Receipt_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -371,5 +394,6 @@
         private Label label7;
         private Label label6;
         private Label label5;
+        private FontAwesome.Sharp.IconButton Button_CancelReceipt;
     }
 }

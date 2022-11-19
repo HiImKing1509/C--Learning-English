@@ -160,4 +160,7 @@
   <data name="Brand_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Brand_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Brand_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Brand_15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

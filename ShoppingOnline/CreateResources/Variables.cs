@@ -46,10 +46,12 @@ namespace ShoppingOnline.CreateResources
         private static string sumPrice = "0";
         private static string numberProduct = "0";
         private static string table = "All";
+        private static int commentID = 1;
         public static string NumReceipt { get => numReceipt; set => numReceipt = value; }
         public static string SumPrice { get => sumPrice; set => sumPrice=value; }
         public static string NumberProduct { get => numberProduct; set => numberProduct=value; }
         public static string Table { get => table; set => table = value; }
+        public static int CommentID { get => commentID; set => commentID = value; }
 
         public static string stringProcessing(string price)
         {
@@ -83,11 +85,21 @@ namespace ShoppingOnline.CreateResources
 
             DataTable get_receipt = provider.ExecuteQuery(query);
 
-            int num_get_receipt = get_receipt.Rows.Count;
-            if (num_get_receipt < 10)
-                return "0" + (num_get_receipt + 1).ToString();
+            if (get_receipt.Rows.Count == 0)
+                return "01";
             else
-                return (num_get_receipt + 1).ToString();
+            {
+                DataRow lastRow = get_receipt.Rows[get_receipt.Rows.Count-1];
+
+                string id = lastRow["RECEIPT_ID"].ToString();
+                int num_get_receipt = Convert.ToInt32(id.Substring(5, 2));
+                //int num_get_receipt = get_receipt.Rows.Count;
+                if (num_get_receipt < 10)
+                    return "0" + (num_get_receipt + 1).ToString();
+                else
+                    return (num_get_receipt + 1).ToString();
+            }
+
         }
 
         public static void Update_DataTableAccount(string id)
@@ -97,6 +109,14 @@ namespace ShoppingOnline.CreateResources
                         $"where CUSTOMER_ID = '{id}'";
             DataProvider provider = new DataProvider();
             DataTableAccount = provider.ExecuteQuery(query);
+        }
+
+        public static void getNumberOfComment()
+        {
+            string query = $"select * from COMMENT";
+            DataProvider provider = new DataProvider();
+            DataTable dt = provider.ExecuteQuery(query);
+            commentID = dt.Rows.Count;
         }
     }
 }

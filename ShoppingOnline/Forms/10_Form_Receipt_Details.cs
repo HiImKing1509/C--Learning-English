@@ -16,6 +16,7 @@ namespace ShoppingOnline.Forms
     public partial class _10_Form_Receipt_Details : Form
     {
         private Form activeForm = null;
+        string receipt_id = "";
 
         public _10_Form_Receipt_Details()
         {
@@ -26,6 +27,8 @@ namespace ShoppingOnline.Forms
         {
             Button_BackToHistory.BackColor = CreateResources.Variables.MaastrichtBlue;
             Button_BackToHistory.ForeColor = CreateResources.Variables.MetallicYellow;
+
+            receipt_id = id;
 
             Load_Product(id);
             LoadCustomerInformation(id);
@@ -116,6 +119,18 @@ namespace ShoppingOnline.Forms
 
             Label_SumPrice.Text = CreateResources.Variables.stringProcessing(dtShowReceiptInformation.Rows[0]["RECEIPT_PRICE"].ToString());
             Label_NumberOfProducts.Text = dtShowReceiptDetails.Rows.Count.ToString();
+        }
+
+        private void Button_CancelReceipt_Click(object sender, EventArgs e)
+        {
+            string query = $"delete from RECEIPT where RECEIPT_ID = '{receipt_id}'";
+            DataProvider provider = new DataProvider();
+
+            int del = provider.ExecuteNonQuery(query);
+            query = $"delete from RECEIPT_DETAILS where RECEIPT_DETAILS_ID = '{receipt_id}'";
+            del = provider.ExecuteNonQuery(query);
+
+            openChildForm(new _09_Form_History());
         }
     }
 }

@@ -199,5 +199,15 @@ namespace ShoppingOnline.CreateResources {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Brand_15 {
+            get {
+                object obj = ResourceManager.GetObject("Brand_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

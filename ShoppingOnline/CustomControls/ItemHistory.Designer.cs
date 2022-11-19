@@ -35,6 +35,7 @@
             this.Label_Receipt_ID = new System.Windows.Forms.Label();
             this.Label_Receipt_Date = new System.Windows.Forms.Label();
             this.Button_DetailProduct = new FontAwesome.Sharp.IconButton();
+            this.Button_BillDetails = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +54,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(485, 28);
+            this.label2.Location = new System.Drawing.Point(374, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 25);
             this.label2.TabIndex = 5;
@@ -97,7 +98,7 @@
             this.Label_Receipt_Date.AutoSize = true;
             this.Label_Receipt_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Label_Receipt_Date.ForeColor = System.Drawing.Color.Gray;
-            this.Label_Receipt_Date.Location = new System.Drawing.Point(647, 28);
+            this.Label_Receipt_Date.Location = new System.Drawing.Point(536, 28);
             this.Label_Receipt_Date.Name = "Label_Receipt_Date";
             this.Label_Receipt_Date.Size = new System.Drawing.Size(232, 25);
             this.Label_Receipt_Date.TabIndex = 28;
@@ -116,19 +117,41 @@
             this.Button_DetailProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Button_DetailProduct.IconSize = 32;
             this.Button_DetailProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_DetailProduct.Location = new System.Drawing.Point(991, 43);
+            this.Button_DetailProduct.Location = new System.Drawing.Point(812, 42);
             this.Button_DetailProduct.Name = "Button_DetailProduct";
-            this.Button_DetailProduct.Size = new System.Drawing.Size(201, 51);
+            this.Button_DetailProduct.Size = new System.Drawing.Size(200, 50);
             this.Button_DetailProduct.TabIndex = 29;
             this.Button_DetailProduct.Text = "Chi tiết đơn hàng";
             this.Button_DetailProduct.UseVisualStyleBackColor = false;
             this.Button_DetailProduct.Click += new System.EventHandler(this.Button_DetailProduct_Click);
+            // 
+            // Button_BillDetails
+            // 
+            this.Button_BillDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Button_BillDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_BillDetails.FlatAppearance.BorderSize = 0;
+            this.Button_BillDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_BillDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Button_BillDetails.ForeColor = System.Drawing.Color.White;
+            this.Button_BillDetails.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Button_BillDetails.IconColor = System.Drawing.Color.Black;
+            this.Button_BillDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_BillDetails.IconSize = 32;
+            this.Button_BillDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_BillDetails.Location = new System.Drawing.Point(1030, 42);
+            this.Button_BillDetails.Name = "Button_BillDetails";
+            this.Button_BillDetails.Size = new System.Drawing.Size(200, 50);
+            this.Button_BillDetails.TabIndex = 30;
+            this.Button_BillDetails.Text = "Chi tiết hóa đơn";
+            this.Button_BillDetails.UseVisualStyleBackColor = false;
+            this.Button_BillDetails.Click += new System.EventHandler(this.Button_BillDetails_Click);
             // 
             // ItemHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Button_BillDetails);
             this.Controls.Add(this.Button_DetailProduct);
             this.Controls.Add(this.Label_Receipt_Date);
             this.Controls.Add(this.Label_Receipt_ID);
@@ -152,5 +175,6 @@
         private Label Label_Receipt_ID;
         private Label Label_Receipt_Date;
         private FontAwesome.Sharp.IconButton Button_DetailProduct;
+        private FontAwesome.Sharp.IconButton Button_BillDetails;
     }
 }
